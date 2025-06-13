@@ -20,8 +20,11 @@ spec:
         ports:
         - containerPort: 8000
         env:
-        - name: OPENROUTER_API_KEY
-          value: "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"
+        - name: GOOGLE_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: ai-assessment-secrets
+              key: google-api-key
         resources:
           requests:
             memory: "256Mi"

@@ -107,8 +107,17 @@ docker-compose up
 
 ### Deploy to Kubernetes
 ```bash
-# Apply all manifests
-kubectl apply -f k8s/
+# Create secret with your API key
+echo -n "your_actual_gemini_api_key" | base64
+# Copy the output and replace 'your_base64_encoded_api_key' in k8s/secrets.yaml
+
+# Apply secrets first
+kubectl apply -f k8s/secrets.yaml
+
+# Apply all other manifests
+kubectl apply -f k8s/backend-deployment.yaml
+kubectl apply -f k8s/frontend-deployment.yaml
+kubectl apply -f k8s/ingress.yaml
 
 # Check status
 kubectl get pods
