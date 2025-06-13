@@ -1,4 +1,4 @@
-# 🎓 AI-Powered Assessment Tool
+# 🎓 Interesting Project: AI-Powered Homework Platform
 
 An interactive web application that converts educational content into assessments and provides AI-powered tutoring. Upload documents (PDF/TXT) to generate essay prompts or multiple-choice quizzes, get instant AI grading, and chat with an AI tutor.
 
@@ -199,38 +199,6 @@ minikube service frontend-service
 - `react-router-dom` - Client-side routing
 - `vite` - Build tool
 
-## 🎯 Requirements Fulfillment
-
-### ✅ Core Tasks Completed
-
-1. **Document Upload & Content Generation**
-   - ✅ PDF/TXT file upload
-   - ✅ Essay prompt generation with guidelines
-   - ✅ 20 MCQ generation with answers and explanations
-   - ✅ Clear UI presentation
-
-2. **Answer Submission & Automatic Grading**
-   - ✅ Essay submission and AI grading
-   - ✅ MCQ selection and scoring
-   - ✅ Immediate feedback with detailed explanations
-   - ✅ AI-powered answer evaluation
-
-3. **Tutoring Chatbot Interface**
-   - ✅ Context-aware chat interface
-   - ✅ Conversation history display
-   - ✅ Content-based question answering
-   - ✅ Easy-to-use chat UI
-
-4. **Front-End Development**
-   - ✅ Modern React application
-   - ✅ Clean, intuitive interface
-   - ✅ Responsive design
-   - ✅ Smooth navigation flow
-
-5. **Containerization & Deployment**
-   - ✅ Docker configurations for both services
-   - ✅ Kubernetes manifests
-   - ✅ Production-ready deployment setup
 
 ## 🚧 Known Limitations
 
@@ -264,9 +232,6 @@ FRONTEND_PORT=5173
 4. Test thoroughly
 5. Submit a pull request
 
-## 📄 License
-
-This project is for assessment purposes only.
 
 ---
 
