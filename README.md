@@ -26,12 +26,19 @@ An interactive web application that converts educational content into assessment
 - Docker (optional)
 - Kubernetes cluster (optional)
 
-### 1. Backend Setup
+### 1. Environment Setup
 ```bash
 # Create virtual environment
 python3 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
+# Set up environment variables
+cp env.example .env
+# Edit .env file and add your Google Gemini API key
+```
+
+### 2. Backend Setup
+```bash
 # Install dependencies
 cd backend
 pip install -r requirements.txt
@@ -41,7 +48,7 @@ uvicorn app.main:app --reload
 ```
 Backend will be available at `http://localhost:8000`
 
-### 2. Frontend Setup
+### 3. Frontend Setup
 ```bash
 # Install dependencies
 cd frontend
@@ -52,7 +59,7 @@ npm run dev
 ```
 Frontend will be available at `http://localhost:5173`
 
-### 3. Usage
+### 4. Usage
 1. Open `http://localhost:5173` in your browser
 2. Upload a PDF or text file
 3. Choose assessment type (Essay or MCQ)
@@ -214,7 +221,20 @@ minikube service frontend-service
 
 ## 🔑 Environment Variables
 
-- `OPENROUTER_API_KEY`: OpenRouter API key (provided in code)
+Create a `.env` file in the root directory:
+
+```bash
+# Required
+GOOGLE_API_KEY=your_gemini_api_key_here
+
+# Optional (defaults shown)
+BACKEND_HOST=localhost
+BACKEND_PORT=8000
+FRONTEND_HOST=localhost
+FRONTEND_PORT=5173
+```
+
+**⚠️ Important**: Never commit your `.env` file to Git. The actual API key is excluded via `.gitignore`.
 
 ## 🤝 Contributing
 

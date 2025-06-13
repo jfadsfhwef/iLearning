@@ -2,7 +2,11 @@ import os
 import json
 from google import genai
 
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "AIzaSyCVkp9YJiMsPmNjFZVNaR38Pg_zcwJX8Ik")
+# Load API key from environment variables
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+
+if not GOOGLE_API_KEY:
+    raise ValueError("GOOGLE_API_KEY environment variable is required. Please set it in your .env file.")
 
 client = genai.Client(api_key=GOOGLE_API_KEY)
 MODEL = "gemini-2.0-flash"
