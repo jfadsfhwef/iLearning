@@ -5,9 +5,20 @@ An interactive web application that converts educational content into assessment
 ## ✨ Features
 
 - **📚 Document Upload**: Support for PDF and text files
+  <img width="658" alt="1" src="https://github.com/user-attachments/assets/20fe681a-7813-439f-a77a-e5358f4dcc3b" />
+
 - **🎯 Assessment Generation**: AI-powered essay prompts and 20-question MCQs
+  
+  <img width="775" alt="Untitled" src="https://github.com/user-attachments/assets/b57b7d3e-e483-4295-bf9d-be6d39abaec0" />
+
+  <img width="775" alt="q" src="https://github.com/user-attachments/assets/5db977c7-e3d3-42ca-9df5-e110c0e31be4" />
+
 - **📊 Automatic Grading**: Instant feedback and scoring using Gemini AI
+  <img width="792" alt="6" src="https://github.com/user-attachments/assets/c6e7a292-5a52-494e-a63c-65b639724beb" />
+
 - **💬 AI Tutoring**: Context-aware chatbot for follow-up questions
+  <img width="525" alt="qq" src="https://github.com/user-attachments/assets/2267b5c0-fb16-4dfe-aee0-c8093c038eda" />
+
 - **🎨 Modern UI**: Clean, responsive interface with intuitive navigation
 - **🐳 Containerized**: Docker and Kubernetes ready for easy deployment
 
