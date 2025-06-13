@@ -6,16 +6,16 @@ An interactive web application that converts educational content into assessment
 
 - **📚 Document Upload**: Support for PDF and text files
 - **🎯 Assessment Generation**: AI-powered essay prompts and 20-question MCQs
-- **📊 Automatic Grading**: Instant feedback and scoring using GPT-4
+- **📊 Automatic Grading**: Instant feedback and scoring using Gemini AI
 - **💬 AI Tutoring**: Context-aware chatbot for follow-up questions
 - **🎨 Modern UI**: Clean, responsive interface with intuitive navigation
 - **🐳 Containerized**: Docker and Kubernetes ready for easy deployment
 
 ## 🏗️ Architecture
 
-- **Backend**: FastAPI (Python) with OpenRouter API integration
+- **Backend**: FastAPI (Python) with Google Gemini AI integration
 - **Frontend**: React with modern CSS styling
-- **AI/LLM**: GPT-4 Turbo via OpenRouter
+- **AI/LLM**: Google Gemini 2.0 Flash
 - **Containerization**: Docker + Kubernetes
 
 ## 🚀 Quick Start
@@ -90,7 +90,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - OPENROUTER_API_KEY=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
+      - GOOGLE_API_KEY=your_gemini_api_key_here
   
   frontend:
     image: ai-assessment-frontend
@@ -141,27 +141,27 @@ minikube service frontend-service
 ├── backend/
 │   ├── app/
 │   │   ├── main.py              # FastAPI app
-│   │   │   ├── routers/             # API endpoints
-│   │   │   │   ├── upload.py        # File upload
-│   │   │   │   ├── generate.py      # Assessment generation
-│   │   │   │   ├── grade.py         # Grading
-│   │   │   │   └── chat.py          # Tutoring chat
-│   │   │   └── services/            # Business logic
-│   │   │       ├── file_service.py  # File processing
-│   │   │       └── llm_service.py   # AI integration
-│   │   ├── requirements.txt
-│   │   └── Dockerfile
-│   ├── frontend/
-│   │   ├── src/
-│   │   │   ├── App.jsx              # Main React component
-│   │   │   └── App.css              # Styling
-│   │   ├── package.json
-│   │   └── Dockerfile
-│   ├── k8s/                         # Kubernetes manifests
-│   │   ├── backend-deployment.yaml
-│   │   ├── frontend-deployment.yaml
-│   │   └── ingress.yaml
-│   └── README.md
+│   │   ├── routers/             # API endpoints
+│   │   │   ├── upload.py        # File upload
+│   │   │   ├── generate.py      # Assessment generation
+│   │   │   ├── grade.py         # Grading
+│   │   │   └── chat.py          # Tutoring chat
+│   │   └── services/            # Business logic
+│   │       ├── file_service.py  # File processing
+│   │       └── llm_service.py   # AI integration
+│   ├── requirements.txt
+│   └── Dockerfile
+├── frontend/
+│   ├── src/
+│   │   ├── App.jsx              # Main React component
+│   │   └── App.css              # Styling
+│   ├── package.json
+│   └── Dockerfile
+├── k8s/                         # Kubernetes manifests
+│   ├── backend-deployment.yaml
+│   ├── frontend-deployment.yaml
+│   └── ingress.yaml
+└── README.md
 ```
 
 ## 🔧 Dependencies
@@ -172,7 +172,7 @@ minikube service frontend-service
 - `python-multipart` - File upload support
 - `pydantic` - Data validation
 - `PyPDF2` - PDF text extraction
-- `openai` - OpenRouter API client
+- `google-genai` - Google Gemini AI client
 
 ### Frontend
 - `react` - UI framework
@@ -250,4 +250,4 @@ This project is for assessment purposes only.
 
 ---
 
-**Built with ❤️ using FastAPI, React, and OpenRouter AI** 
+**Built with ❤️ using FastAPI, React, and Google Gemini AI**
